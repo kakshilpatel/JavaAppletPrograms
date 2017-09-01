@@ -1,0 +1,54 @@
+# include<iostream.h>
+# include<conio.h>
+class complex
+{
+	private:
+		int a,b;
+	public:
+		complex(int x,int y);
+		void printdata();
+		complex operator+(complex c2);
+};
+complex::complex(int x,int y)
+{
+	a=x;
+	b=y;
+}
+void complex::printdata()
+{
+	cout<<"\n A is:-->"<<a;
+	cout<<"\n B is:-->"<<b;
+}
+complex complex::operator+(complex c2)
+{
+	complex c3;
+	c3.a=a+c2.a;
+	c3.b=b+c3.b;
+	return c3;
+}
+void main()
+{
+	complex c1,c2,c3;
+	clrscr();
+	c1=complex(10,20);
+	c2=complex(20,30);
+	c3=c1+c2;
+	c3.printdata();
+	getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
